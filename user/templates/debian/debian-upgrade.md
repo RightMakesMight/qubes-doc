@@ -45,6 +45,7 @@ instructions specific to your particular release.
 [user@dom0 ~]$ qvm-clone debian-<old> debian-<new>
 [user@dom0 ~]$ qvm-run -a debian-<new> gnome-terminal
 [user@debian-<new> ~]$ sudo sed -i 's/<old-name>/<new-name>/g' /etc/apt/sources.list
+[user@debian-<new> ~]$ sudo sed -i 's/<new-name>\/updates/<new-name>-security/g' /etc/apt/sources.list
 [user@debian-<new> ~]$ sudo sed -i 's/<old-name>/<new-name>/g' /etc/apt/sources.list.d/qubes-r4.list
 [user@debian-<new> ~]$ sudo apt update
 [user@debian-<new> ~]$ sudo apt upgrade
